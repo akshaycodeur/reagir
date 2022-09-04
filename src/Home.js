@@ -1,11 +1,12 @@
+import { useState } from 'react';
+
 const Home = () => {
 
-    let name = 'John Smith';
+    //let name = 'John Smith';
+    const [name, setName] = useState('John Smith')
 
     const handleChangeName = () => {
-        console.log(name);
-        name = "Jane Doe";
-        console.log(name);
+        setName('Jane Doe')
     }
 
     return ( 
@@ -13,6 +14,7 @@ const Home = () => {
             <h2>Homepage</h2>
             <hr />
             <h5>Will clicking on the button change the value of the variable <strong>name</strong> ?</h5>
+            <h3>{name}</h3>
             <button onClick = {handleChangeName}>Click me</button>
         </div>
      );
