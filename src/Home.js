@@ -2,43 +2,21 @@ import { useState } from 'react';
 
 const Home = () => {
 
-    //let name = 'John Smith';
-    const [name, setName] = useState('John Smith');
-    const [age, setAge] = useState("20");
-
-    const handleChangeName = () => {
-        setName('Jane Doe');
-        setAge('31');
-    }
-
-    const handleChangeNaruto = () => {
-        setName('Naruto');
-        setAge('16');
-    }
-
-    const handleChangeSasuke = () => {
-        setName('Sasuke');
-        setAge('14');
-    }
-
-    const handleChangeKakashi = () => {
-        setName('Kakashi');
-        setAge('41');
-    }
-
+    const [blogs,setBlogs] = useState([
+        {title:'Day One In Great Britain', body:'lorem ipsum...', author:'John Red', id:1},
+        {title:'Day One In Manhattan', body:'lorem ipsum...', author:'John Lennon', id:2},
+        {title:'Day One In Oshawa', body:'lorem ipsum...', author:'Red Foreman', id:3}
+    ]);
+    
     return ( 
         <div className="home">
-            <h2>Homepage</h2>
-            <hr />
-            <h5>Will clicking on the button change the value of the variable <strong>name</strong> ?</h5>
-            <h3>{name} is {age} years old</h3>
-            <button onClick = {handleChangeName}>Click me</button>
-
-            <div className="buttons">
-                <button onClick={handleChangeNaruto}>Naruto</button>
-                <button onClick={handleChangeSasuke}>Sasuke</button>
-                <button onClick={handleChangeKakashi}>Kakashi</button>
-            </div>
+            {blogs.map((blogpost) => (
+                <div className="blog-preview" key={blogpost.id}>
+                    <h2>{blogpost.title}</h2>
+                    <p>Written by {blogpost.author}</p>
+                    <hr />
+                </div>
+            ))}
         </div>
      );
 }
