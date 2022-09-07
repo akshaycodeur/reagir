@@ -27,10 +27,17 @@ const Home = () => {
     
     const theirTitle = 'Pokemon Trainers';
 
+    const eventDelete = () => {
+        console.log('You clicked on the delete button');
+    };
+
     return ( 
         <div className='home'>
-            <BlogList blogs={blogs} title='Maitre des sortileges' people={people} theirTitle={theirTitle} pokemon = {pokemon}/>
-            <BlogList pokemon={pokemon.filter((pokemon) => pokemon.move1==='Scratch')} title='Maitre des sortileges2' people={people} theirTitle={theirTitle} blogs = {blogs}/>
+            <BlogList blogs={blogs} title='Maitre des sortileges' people={people} theirTitle={theirTitle} pokemon = {pokemon} eventDelete={eventDelete} />
+            <hr />
+            <hr />
+            <hr />
+            <BlogList pokemon={pokemon.filter((pokemon) => pokemon.move1==='Scratch')} title='Maitre des sortileges2' people={people} theirTitle={theirTitle} blogs = {blogs} eventDelete={eventDelete} />
         </div>
      );
 }

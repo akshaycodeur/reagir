@@ -1,4 +1,4 @@
-const BlogList = ({blogs,people,title,theirTitle, pokemon}) => {
+const BlogList = ({blogs,people,title,theirTitle, pokemon,eventDelete}) => {
     
     return ( 
         <div className="blog-list">
@@ -9,10 +9,11 @@ const BlogList = ({blogs,people,title,theirTitle, pokemon}) => {
                 <div className="blog-preview" key={blogpost.id}>
                     <h2>{blogpost.title}</h2>
                     <p>Written by {blogpost.author}</p>
+                    <button className="deletebutton" onClick={ () => eventDelete()} >Delete Record</button>
                     <hr />
                 </div>
             ))}
-            <hr />
+            {/* <hr />
             <hr />
             <h1>{theirTitle}</h1>
             {people.map((peoplesss) => (
@@ -28,7 +29,7 @@ const BlogList = ({blogs,people,title,theirTitle, pokemon}) => {
                 <div className="blog-preview" key={poketmon.id}>
                     <h3>{poketmon.pokename}</h3>
                 </div>
-            ))}
+            ))} */}
            
         </div>
      );
