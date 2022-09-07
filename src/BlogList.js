@@ -27,17 +27,14 @@ const BlogList = ({blogs,people,title,theirTitle, pokemon}) => {
             {pokemon.map((poketmon) => (
                 <div className="blog-preview" key={poketmon.id}>
                     <h3>{poketmon.pokename}</h3>
-                    <ul>
-                        <li>{poketmon.move1}</li>
-                        <li>{poketmon.move2}</li>
-                        <li>{poketmon.move3}</li>
-                        <li>{poketmon.move4}</li>
-                    </ul>
-                    <hr />
                 </div>
             ))}
+           
         </div>
      );
 }
  
 export default BlogList;
+
+
+
