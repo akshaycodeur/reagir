@@ -12,13 +12,15 @@ const Home = () => {
     const [people,setPeople] = useState([
         {name: 'Ash', age: 13, id:1},
         {name: 'Gary', age: 33, id:2},
-        {name: 'Red', age: 23, id:3},
+        {name: 'Red', age: 23, id:3}
 
-    ])
+    ]);
     
+    const theirTitle = 'Pokemon Trainers';
+
     return ( 
         <div className="home">
-            <BlogList blogs={blogs} title="Maitre des sortileges" />
+            <BlogList blogs={blogs} title="Maitre des sortileges" people={people} theirTitle={theirTitle}/>
         </div>
      );
 }
