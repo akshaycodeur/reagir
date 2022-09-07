@@ -8,10 +8,17 @@ const Home = () => {
         {title:'Day One In Manhattan', body:'lorem ipsum...', author:'John Lennon', id:2},
         {title:'Day One In Oshawa', body:'lorem ipsum...', author:'Red Foreman', id:3}
     ]);
+
+    const [people,setPeople] = useState([
+        {name: 'Ash', age: 13, id:1},
+        {name: 'Gary', age: 33, id:2},
+        {name: 'Red', age: 23, id:3},
+
+    ])
     
     return ( 
         <div className="home">
-            <BlogList blogs={blogs} />
+            <BlogList blogs={blogs} title="Maitre des sortileges" />
         </div>
      );
 }
