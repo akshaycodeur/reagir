@@ -15,12 +15,19 @@ const Home = () => {
         {name: 'Red', age: 23, id:3}
 
     ]);
+
+    const listTitle = "The Pokemon List";
+    const [pokemon, setPokemon] = useState([
+        {pokename: 'Pikachu', move1: 'Tackle', move2:'Lightning', move3:'Growl', move4:'Quick Attack', id:1},
+        {pokename: 'Ratata', move1: 'Tackle', move2:'Growl', move3:'Leer', move4:'Quick Attack', id:2},
+        {pokename: 'Pikachu', move1: 'Scratch', move2:'Punch', move3:'Ember', move4:'Leer', id:3}
+    ]);
     
     const theirTitle = 'Pokemon Trainers';
 
     return ( 
-        <div className="home">
-            <BlogList blogs={blogs} title="Maitre des sortileges" people={people} theirTitle={theirTitle}/>
+        <div className='home'>
+            <BlogList blogs={blogs} title='Maitre des sortileges' people={people} theirTitle={theirTitle} pokemon = {pokemon}/>
         </div>
      );
 }
