@@ -13,7 +13,7 @@ const BlogList = ({blogs,people,title,theirTitle, pokemon,handleDelete}) => {
                     <hr />
                 </div>
             ))}
-            {/* <hr />
+            <hr />
             <hr />
             <h1>{theirTitle}</h1>
             {people.map((peoplesss) => (
@@ -29,7 +29,7 @@ const BlogList = ({blogs,people,title,theirTitle, pokemon,handleDelete}) => {
                 <div className="blog-preview" key={poketmon.id}>
                     <h3>{poketmon.pokename}</h3>
                 </div>
-            ))} */}
+            ))}
            
         </div>
      );
