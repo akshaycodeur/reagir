@@ -32,3 +32,8 @@
   margin: 40px auto;
   padding: 20px;
 }
+
+.blog-preview span{margin-right: .5rem;}
+
+.blog-preview{border-radius: 1rem; background-color: antiquewhite; margin-bottom: 1rem; padding: 2rem 2rem;}
+.title{text-align: center; margin-bottom: 2rem;}

@@ -1,43 +1,175 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import BlogList from './BlogList';
 
 const Home = () => {
 
     const [blogs,setBlogs] = useState([
-        {title:'Day One In Great Britain', body:'lorem ipsum...', author:'John Red', id:1},
-        {title:'Day One In Manhattan', body:'lorem ipsum...', author:'John Lennon', id:2},
-        {title:'Day One In Oshawa', body:'lorem ipsum...', author:'Red Foreman', id:3}
+        {
+            "num": 1,
+            "name": "Bulbasaur",
+            "variations": [
+                {
+                    "name": "Bulbasaur",
+                    "description": "Bulbasaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.",
+                    "image": "images/bulbasaur.jpg",
+                    "types": [
+                        "Grass",
+                        "Poison"
+                    ],
+                    "specie": "Seed Pokémon",
+                    "height": 0.7,
+                    "weight": 6.9,
+                    "abilities": [
+                        "Overgrow",
+                        "Chlorophyll"
+                    ],
+                    "stats": {
+                        "total": 318,
+                        "hp": 45,
+                        "attack": 49,
+                        "defense": 49,
+                        "speedAttack": 65,
+                        "speedDefense": 65,
+                        "speed": 45
+                    },
+                    "evolutions": [
+                        "bulbasaur",
+                        "ivysaur",
+                        "venusaur"
+                    ]
+                }
+            ],
+            "link": "https://pokemondb.net/pokedex/bulbasaur"
+        },
+        {
+            "num": 2,
+            "name": "Ivysaur",
+            "variations": [
+                {
+                    "name": "Ivysaur",
+                    "description": "Ivysaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.",
+                    "image": "images/ivysaur.jpg",
+                    "types": [
+                        "Grass",
+                        "Poison"
+                    ],
+                    "specie": "Seed Pokémon",
+                    "height": 1,
+                    "weight": 13,
+                    "abilities": [
+                        "Overgrow",
+                        "Chlorophyll"
+                    ],
+                    "stats": {
+                        "total": 405,
+                        "hp": 60,
+                        "attack": 62,
+                        "defense": 63,
+                        "speedAttack": 80,
+                        "speedDefense": 80,
+                        "speed": 60
+                    },
+                    "evolutions": [
+                        "bulbasaur",
+                        "ivysaur",
+                        "venusaur"
+                    ]
+                }
+            ],
+            "link": "https://pokemondb.net/pokedex/ivysaur"
+        },
+        {
+            "num": 3,
+            "name": "Venusaur",
+            "variations": [
+                {
+                    "name": "Venusaur",
+                    "description": "Venusaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.\nVenusaur has a Mega Evolution, available from X & Y onwards.",
+                    "image": "images/venusaur.jpg",
+                    "types": [
+                        "Grass",
+                        "Poison"
+                    ],
+                    "specie": "Seed Pokémon",
+                    "height": 2,
+                    "weight": 100,
+                    "abilities": [
+                        "Overgrow",
+                        "Chlorophyll"
+                    ],
+                    "stats": {
+                        "total": 525,
+                        "hp": 80,
+                        "attack": 82,
+                        "defense": 83,
+                        "speedAttack": 100,
+                        "speedDefense": 100,
+                        "speed": 80
+                    },
+                    "evolutions": [
+                        "bulbasaur",
+                        "ivysaur",
+                        "venusaur"
+                    ]
+                },
+                {
+                    "name": "Mega Venusaur",
+                    "description": "Venusaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.\nVenusaur has a Mega Evolution, available from X & Y onwards.",
+                    "image": "images/venusaur-mega.jpg",
+                    "types": [
+                        "Grass",
+                        "Poison"
+                    ],
+                    "specie": "Seed Pokémon",
+                    "height": 2.4,
+                    "weight": 155.5,
+                    "abilities": [
+                        "Thick Fat"
+                    ],
+                    "stats": {
+                        "total": 625,
+                        "hp": 80,
+                        "attack": 100,
+                        "defense": 123,
+                        "speedAttack": 122,
+                        "speedDefense": 120,
+                        "speed": 80
+                    },
+                    "evolutions": [
+                        "bulbasaur",
+                        "ivysaur",
+                        "venusaur"
+                    ]
+                }
+            ],
+            "link": "https://pokemondb.net/pokedex/venusaur"
+        }
     ]);
 
-    const [people,setPeoplexxx] = useState([
-        {name: 'Ash', age: 13, id:1},
-        {name: 'Gary', age: 33, id:2},
-        {name: 'Red', age: 23, id:3}
-
-    ]);
-
-    const listTitle = "The Pokemon List";
-    const [pokemon, setPokemons] = useState([
-        {pokename: 'Pikachu', move1: 'Tackle', move2:'Lightning', move3:'Growl', move4:'Quick Attack', id:1},
-        {pokename: 'Ratata', move1: 'Tackle', move2:'Growl', move3:'Leer', move4:'Quick Attack', id:2},
-        {pokename: 'Hinoarashi', move1: 'Scratch', move2:'Punch', move3:'Ember', move4:'Leer', id:3},
-        {pokename: 'Charmander', move1: 'Scratch', move2:'Punch', move3:'Ember', move4:'Leer', id:4},
-        {pokename: 'Squirtle', move1: 'Tackle', move2:'Growl', move3:'Bubble Blast', move4:'Water Gun', id:5}
-    ]);
+    console.log(blogs);
     
-    const theirTitle = 'Pokemon Trainers';
+    const sectionOneTitle = 'Pokemon List';
 
     const handleDelete = (id) => {
         console.log('You clicked on the delete button');
     };
 
+    useEffect(()=>{
+        fetch('http://localhost:3000/blogs')
+        .then(res =>{
+            return res.json();
+        }) 
+        .then((data)=>{
+            console.log(data);
+            setBlogs(data);
+        });
+    },[]);
+
     return ( 
         <div className='home'>
-            <BlogList blogs={blogs} title='Maitre des sortileges' people={people} theirTitle={theirTitle} pokemon = {pokemon} eventDelete={handleDelete} />
+            <BlogList blogs={blogs} title={sectionOneTitle}  eventDelete={handleDelete} />
             <hr />
-            <hr />
-            <hr />
-            <BlogList pokemon={pokemon.filter((pokemon) => pokemon.move1==='Scratch')} title='Maitre des sortileges2' people={people} theirTitle={theirTitle} blogs = {blogs} eventDelete={handleDelete} />
         </div>
      );
 }
