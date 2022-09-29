@@ -20,7 +20,10 @@ const Home = () => {
         .then((data)=>{
             setBlogs(data);
             setIsPending(false);
-        });
+        })
+        .catch( e => {
+            alert(e.message)
+        })
     },[]);
 
     return ( 
