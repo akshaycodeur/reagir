@@ -8,11 +8,8 @@ const Home = () => {
 
     console.log(blogs);
     
-    const sectionOneTitle = 'Pokemon List';
+    const sectionOneTitle = 'Pokemon Lists';
 
-    const handleDelete = (id) => {
-        console.log('You clicked on the delete button');
-    };
 
     useEffect(()=>{
         fetch('http://localhost:3000/blogs')
@@ -26,7 +23,7 @@ const Home = () => {
 
     return ( 
         <div className='home'>
-           { blogs && <BlogList blogs={blogs} title={sectionOneTitle}  eventDelete={handleDelete} />}
+           { blogs && <BlogList blogs={blogs} title={sectionOneTitle} />}
             <hr />
         </div>
      );
