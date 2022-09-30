@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-const useFetch = () => {
+const useFetch = (url) => {
 
     const [data, setData] = useState(null);
     const [isPending,setIsPending] = useState(true);
@@ -10,7 +10,7 @@ const useFetch = () => {
     const sectionOneTitle = 'Pokemon Lists';
 
     useEffect(()=>{
-        fetch('http://localhost:3000/blogs')
+        fetch(url)
         .then(res =>{
             if(!res.ok){
                 throw Error('Could not fetch the date for that resources')
@@ -26,7 +26,12 @@ const useFetch = () => {
             setNetworkError(e.message)
             setIsPending(false);
         })
-    },[]);
+    },[url]);
+
+    return{ data, isPending, networkError, sectionOneTitle}
+
 }
 
-export default useFetch
+
+
+export default useFetch;
