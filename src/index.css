@@ -33,11 +33,10 @@
   padding: 20px;
 }
 
-hr.separator{margin:1rem 0;}
 
 
 /* Comments  */
-span.Grass {
+.Grass {
   background: green;
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -45,7 +44,7 @@ span.Grass {
   margin-right: 0.5rem;
 }
 
-span.Poison {
+.Poison {
   background: rgb(83, 0, 128);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -53,7 +52,7 @@ span.Poison {
   margin-right: 0.5rem;
 }
 
-span.Fire {
+.Fire {
   background: rgb(128, 19, 0);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -61,8 +60,8 @@ span.Fire {
   margin-right: 0.5rem;
 }
 
-span.Flying,
-span.Normal  {
+.Flying,
+.Normal  {
   background: rgb(59, 59, 59);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -71,7 +70,7 @@ span.Normal  {
 }
 
 
-span.Fighting  {
+.Fighting  {
   background: rgb(39, 38, 38);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -80,7 +79,7 @@ span.Fighting  {
 }
 
 
-span.Water {
+.Water {
   background: rgb(73, 142, 176);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -88,7 +87,7 @@ span.Water {
   margin-right: 0.5rem;
 }
 
-span.Bug {
+.Bug {
   background: rgb(150, 176, 73);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -96,7 +95,7 @@ span.Bug {
   margin-right: 0.5rem;
 }
 
-span.Electric {
+.Electric {
   background: rgb(129, 154, 158);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -104,7 +103,7 @@ span.Electric {
   margin-right: 0.5rem;
 }
 
-span.Ground {
+.Ground {
   background: rgb(125, 62, 7);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -112,7 +111,7 @@ span.Ground {
   margin-right: 0.5rem;
 }
 
-span.Fairy {
+.Fairy {
   background: rgb(244, 112, 191);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -120,7 +119,7 @@ span.Fairy {
   margin-right: 0.5rem;
 }
 
-span.Psychic {
+.Psychic {
   background: rgb(221, 180, 249);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -128,7 +127,7 @@ span.Psychic {
   margin-right: 0.5rem;
 }
 
-span.Rock {
+.Rock {
   background: rgb(21, 21, 21);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -136,7 +135,7 @@ span.Rock {
   margin-right: 0.5rem;
 }
 
-span.Steel {
+.Steel {
   background: rgb(73, 80, 89);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -144,7 +143,7 @@ span.Steel {
   margin-right: 0.5rem;
 }
 
-span.Ice {
+.Ice {
   background: rgb(176, 210, 255);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -152,7 +151,7 @@ span.Ice {
   margin-right: 0.5rem;
 }
 
-span.Ghost {
+.Ghost {
   background: rgb(155, 148, 255);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -160,7 +159,7 @@ span.Ghost {
   margin-right: 0.5rem;
 }
 
-span.Dark {
+.Dark {
   background: rgb(14, 11, 53);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -168,7 +167,7 @@ span.Dark {
   margin-right: 0.5rem;
 }
 
-span.Dragon {
+.Dragon {
   background: rgb(255, 79, 79);
   padding: 0.25rem .5rem;
   border-radius: 0.25rem;
@@ -178,4 +177,38 @@ span.Dragon {
 
 /* --------------------------------------------------------------------------------------------- */
 
-.pokemonName{margin-bottom: 1rem;}
+.pokemonName {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width: 768px) {
+  .blog-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .blog-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.blog-preview {
+  background: #fafafa;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.pokemonStats{background:#eeeeee;padding:1rem; border-radius: 0 0 .5rem .5rem;}
+
+h4.type {
+  padding: 1rem;
+}
