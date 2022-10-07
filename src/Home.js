@@ -1,20 +1,25 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import BlogList from './BlogList';
 
 const Home = () => {
 
-    const [blogs,setBlogs] = useState([
-        {title:'Day One In Great Britain', body:'lorem ipsum...', author:'John Red', id:1},
-        {title:'Day One In Manhattan', body:'lorem ipsum...', author:'John Lennon', id:2},
-        {title:'Day One In Oshawa', body:'lorem ipsum...', author:'Red Foreman', id:3}
-    ]);
+    const [blogs,setBlogs] = useState(null);
 
-
-
+    useEffect(() => {
+        fetch('http://localhost:8001/blogs')
+          .then(res => {
+            return res.json();
+          })
+          .then(data => {
+            setBlogs(data);
+            console.log(data);
+          })
+      }, [])
 
     return ( 
         <div className='home'>
-            <BlogList blogs={blogs} title='Maitre des sortileges' />
+            {blogs && <BlogList blogs={blogs} title='Welcome to the pokedex' />}
         </div>
      );
 }

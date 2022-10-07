@@ -34,3 +34,148 @@
 }
 
 hr.separator{margin:1rem 0;}
+
+
+/* Comments  */
+span.Grass {
+  background: green;
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Poison {
+  background: rgb(83, 0, 128);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Fire {
+  background: rgb(128, 19, 0);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Flying,
+span.Normal  {
+  background: rgb(59, 59, 59);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+
+span.Fighting  {
+  background: rgb(39, 38, 38);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+
+span.Water {
+  background: rgb(73, 142, 176);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Bug {
+  background: rgb(150, 176, 73);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Electric {
+  background: rgb(129, 154, 158);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Ground {
+  background: rgb(125, 62, 7);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Fairy {
+  background: rgb(244, 112, 191);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Psychic {
+  background: rgb(221, 180, 249);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Rock {
+  background: rgb(21, 21, 21);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Steel {
+  background: rgb(73, 80, 89);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Ice {
+  background: rgb(176, 210, 255);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Ghost {
+  background: rgb(155, 148, 255);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Dark {
+  background: rgb(14, 11, 53);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+span.Dragon {
+  background: rgb(255, 79, 79);
+  padding: 0.25rem .5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.pokemonName{margin-bottom: 1rem;}
