@@ -9,6 +9,7 @@ const Home = () => {
 
 
     useEffect(() => {
+      setTimeout(() => {
         fetch('http://localhost:8001/blogs')
           .then(res => {
             return res.json();
@@ -17,12 +18,13 @@ const Home = () => {
             setBlogs(data);
             setIsPending(false);
           })
+      }, 1000)
       }, [])
 
     return ( 
         <div className='home'>
             { isPending && <div>Loading</div> }
-            {blogs && <BlogList blogs={blogs} title='Welcome to the pokedex' />}
+            {blogs && <BlogList blogs={blogs} title='Welcome to the pokedex 2' />}
         </div>
      );
 }
