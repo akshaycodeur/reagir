@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import Navbar from './Navbar';
 import Home from './Home';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import CreatePokemon from './CreatePokemon';
 
 
 function App() {
@@ -11,8 +12,11 @@ function App() {
       <Navbar />
       <div className="content">
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/create">
+            <CreatePokemon />
           </Route>
         </Switch>
       </div>
