@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import Navbar from './Navbar';
-import Home from './Home';
+import Homeneo from './Homeneo';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import CreatePokemon from './CreatePokemon';
 
@@ -13,7 +13,7 @@ function App() {
       <div className="content">
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Homeneo />
           </Route>
           <Route exact path="/create">
             <CreatePokemon />
