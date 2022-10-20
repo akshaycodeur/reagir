@@ -212,3 +212,13 @@
 h4.type {
   padding: 1rem;
 }
+
+/* Create Pokemon styling */
+
+.createPokemon form {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+input{margin-bottom: 1rem;}
