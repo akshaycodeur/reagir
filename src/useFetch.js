@@ -10,7 +10,10 @@ const useFetch = (url) => {
     const sectionOneTitle = 'Pokemon Lists';
 
     useEffect(()=>{
-        fetch(url)
+
+        const abortCont = new AbortController();
+
+        fetch(url, abortCont.signal)
         .then(res =>{
             if(!res.ok){
                 throw Error('Could not fetch the date for that resources')
@@ -26,7 +29,11 @@ const useFetch = (url) => {
             setError(e.message)
             setIsPending(false);
         })
+
+        return () => abortCont.abort();
     },[url]);
+    
+   
 
     return{ data, isPending, error, sectionOneTitle}
 
