@@ -5,10 +5,14 @@ const CreatePokemon = () => {
     const [pokemonname,setPokemonname] = useState('Enter Pokemon Name');
     const [pokeType,setPokeType] = useState('Enter Pokemon Type #1');
 
+    const handleSubmit = (e) => {
+
+    }
+
     return (  
         <div className="createPokemon">
             <h1>Add new pokemon entry</h1>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <label>Pokemon Name</label>
                 <input 
                 type="text"

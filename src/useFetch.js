@@ -16,7 +16,7 @@ const useFetch = (url) => {
         fetch(url, abortCont.signal)
         .then(res =>{
             if(!res.ok){
-                throw Error('Could not fetch the date for that resources')
+                throw Error('Could not fetch the data for that resources')
             }
             return res.json();
         }) 

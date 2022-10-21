@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/create">
             <CreatePokemon />
           </Route>
-          <Route exact path="/blogs/:id">
+          <Route exact path="/pokemon/:id">
             <BlogDetails />
           </Route>
         </Switch>

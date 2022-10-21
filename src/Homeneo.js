@@ -6,13 +6,13 @@ import useFetch from "./useFetch";
 
 const Home = () => {
 
-  const { error, isPending, data: blogs } = useFetch('http://localhost:8001/blogs')
+  const { error, isPending, data: pokemons } = useFetch('http://localhost:8001/pokemon')
 
     return ( 
         <div className='home'>
           {error && <div>{error}</div>}
             { isPending && <div>Loading</div> }
-            {blogs && <BlogList blogs={blogs} title='Welcome to the pokedex' />}
+            {pokemons && <BlogList pokemons={pokemons} title='Welcome to the pokedex' />}
         </div>
      );
 }
