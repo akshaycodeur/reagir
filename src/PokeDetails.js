@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
-const BlogDetails = () => {
+const PokeDetails = () => {
 
     const { id } = useParams();
     const { error, isPending, data:pokemon } = useFetch('http://localhost:8001/pokemon/' + id);
@@ -16,9 +16,18 @@ const BlogDetails = () => {
                 <div className="pokemonGrid">
                     <div className="topdetails">
                         <div className="pokemonImage">
-                            {pokemon.name}
+                           <img src={pokemon.art_url} alt="" />
                         </div>
-                        <div className="pokemonStats"></div>
+                        <div className="pokemonDetails">
+                            <div className="pokeName"><h4>{pokemon.name}</h4></div>
+                            <div className="type">
+                                <div className={pokemon.types[0]}>{pokemon.types[0]}</div>
+                                <div className={pokemon.types[1]}>{pokemon.types[1]}</div>
+                            </div>
+                            <div className="pokeDescription">
+                                <p>{pokemon.description}</p>
+                            </div>
+                        </div>
                     </div>
                     <div className="description"></div>
                 </div>
@@ -28,4 +37,4 @@ const BlogDetails = () => {
      );
 }
  
-export default BlogDetails;
+export default PokeDetails;

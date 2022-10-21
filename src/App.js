@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Homeneo from './Homeneo';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import CreatePokemon from './CreatePokemon';
-import BlogDetails from './BlogDetails';
+import PokeDetails from './PokeDetails';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             <CreatePokemon />
           </Route>
           <Route exact path="/pokemon/:id">
-            <BlogDetails />
+            <PokeDetails />
           </Route>
         </Switch>
       </div>
