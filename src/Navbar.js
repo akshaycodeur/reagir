@@ -5,12 +5,12 @@ const Navbar = () => {
         <nav className="navbar">
             <h1>Ash Pokedex</h1>
             <div className="links">
-                <Link to="/">PokeIndex</Link>
+                <Link to="/">Pokemon List</Link>
                 <Link to="/create" style={{
                     padding:'.5rem',
                     backgroundColor:"#f1356d",
                     color:'white'
-                    }}>New Post</Link>
+                    }}>Add Pokemon</Link>
             </div>
         </nav>
     );
